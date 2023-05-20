@@ -1,5 +1,6 @@
 package com.moderna.eletrostore.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -20,10 +21,13 @@ public class Cliente {
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "cliente_id")
+    @Column(nullable = false)
     List<Contato> contatos;
+
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "cliente_id")
+    @Column(nullable = false)
     private List<Endereco> enderecos;
 
 }

@@ -17,6 +17,4 @@ public class Endereco {
     private String cidade;
     private String complemento;
 
-    @ManyToOne
-    private Cliente cliente;
 }

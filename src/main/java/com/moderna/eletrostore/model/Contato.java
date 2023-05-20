@@ -13,7 +13,4 @@ public class Contato {
     private String ddd;
     private String numero;
     private String descricao;
-
-    @ManyToOne
-    private Cliente cliente;
 }
