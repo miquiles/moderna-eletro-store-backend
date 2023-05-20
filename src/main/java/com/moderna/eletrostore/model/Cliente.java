@@ -18,11 +18,12 @@ public class Cliente {
     @Column(nullable = false, length = 12)
     private String dataNascimento;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "cliente_id")
-    private List<Contato> contatos;
+    List<Contato> contatos;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "cliente_id")
     private List<Endereco> enderecos;
+
 }
